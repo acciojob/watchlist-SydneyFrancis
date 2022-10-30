@@ -60,7 +60,7 @@ public class MovieController {
         return new ResponseEntity<>("Success",HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping("/delete-directors")
+    @DeleteMapping("/delete-director-by-nameN")
     public ResponseEntity<String> deleteAllDirectors(){
         movieService.DeleteAll();
         return new ResponseEntity<>("Success",HttpStatus.ACCEPTED);

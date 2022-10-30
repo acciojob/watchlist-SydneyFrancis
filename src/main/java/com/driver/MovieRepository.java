@@ -20,11 +20,15 @@ public class MovieRepository {
     HashMap<Movie,Director> hm = new HashMap<>();
 
     public void AddMovieToDB(Movie movie){
-        list1.add(movie);
+        if(!list1.contains(movie)){
+            list1.add(movie);
+        }
     }
 
     public void AddDirectorToDB(Director director){
-        list2.add(director);
+        if(!list2.contains(director)){
+            list2.add(director);
+        }
     }
 
     public void PairMovieAndDirectorToDB(String movieName, String directorName){
@@ -104,5 +108,6 @@ public class MovieRepository {
         }
         hm = new HashMap<>();
     }
+
 
 }
