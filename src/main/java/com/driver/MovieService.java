@@ -32,7 +32,7 @@ public class MovieService {
         return movieRepository.findDirectorInDB(name);
     }
 
-    public List<Movie> getMoviesByDirector(String name){
+    public List<String> getMoviesByDirector(String name){
         return movieRepository.ListofMoviesInDBByDirector(name);
     }
 

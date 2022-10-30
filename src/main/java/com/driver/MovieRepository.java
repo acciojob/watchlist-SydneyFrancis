@@ -67,11 +67,11 @@ public class MovieRepository {
         return null;
     }
 
-    public List<Movie> ListofMoviesInDBByDirector(String name){
-        List<Movie> toReturn = new ArrayList<>();
+    public List<String> ListofMoviesInDBByDirector(String name){
+        List<String> toReturn = new ArrayList<>();
         for(Movie M : hm.keySet()){
             if(hm.get(M).getName().equals(name)){
-                toReturn.add(M);
+                toReturn.add(M.getName());
             }
         }
         return toReturn;

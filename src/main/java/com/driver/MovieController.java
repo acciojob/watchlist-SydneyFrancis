@@ -44,7 +44,7 @@ public class MovieController {
     }
 
     @GetMapping("get-movies-by-director-name/{director}")
-    public ResponseEntity<List<Movie>> getMoviesByDirectorName(@PathVariable("director") String name){
+    public ResponseEntity<List<String>> getMoviesByDirectorName(@PathVariable("director") String name){
         return new ResponseEntity<>(movieService.getMoviesByDirector(name),HttpStatus.FOUND);
     }
 
