@@ -36,7 +36,7 @@ public class MovieService {
         return movieRepository.ListofMoviesInDBByDirector(name);
     }
 
-    public List<Movie> findAllMovies(){
+    public List<String> findAllMovies(){
         return movieRepository.findAllMoviesInDB();
     }
 

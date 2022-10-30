@@ -77,8 +77,12 @@ public class MovieRepository {
         return toReturn;
     }
 
-    public List<Movie> findAllMoviesInDB(){
-        return list1;
+    public List<String> findAllMoviesInDB(){
+        List<String> list = new ArrayList<>();
+        for(Movie m : list1){
+            list.add(m.getName());
+        }
+        return list;
     }
 
     public void DeleteMovieFromDBbyName(String Dname){
@@ -92,7 +96,7 @@ public class MovieRepository {
         for(Movie m : hm.keySet()){
             if(hm.get(m) == D){
                 list1.remove(m);
-                hm.remove(m);
+//                hm.remove(m);
             }
         }
 
